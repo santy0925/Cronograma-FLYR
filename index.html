@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Información de Empleados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏢 Sistema de Información de Empleados</h1>
+            <p>Gestiona la información de puestos, equipos y horarios</p>
+        </div>
+
+        <div class="main-content">
+            <!-- Sección de Registro -->
+            <div class="section">
+                <h2>📝 Registrar Empleado</h2>
+                <form id="employeeForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="puesto">Puesto:</label>
+                        <input type="text" id="puesto" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="equipo">Equipo:</label>
+                        <input type="text" id="equipo" required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Días de Trabajo:</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="lunes" name="dias" value="Lunes">
+                                <label for="lunes">Lunes</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="martes" name="dias" value="Martes">
+                                <label for="martes">Martes</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="miercoles" name="dias" value="Miércoles">
+                                <label for="miercoles">Miércoles</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="jueves" name="dias" value="Jueves">
+                                <label for="jueves">Jueves</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="viernes" name="dias" value="Viernes">
+                                <label for="viernes">Viernes</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="sabado" name="dias" value="Sábado">
+                                <label for="sabado">Sábado</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="domingo" name="dias" value="Domingo">
+                                <label for="domingo">Domingo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn">Registrar Empleado</button>
+                </form>
+                <div id="message"></div>
+            </div>
+
+            <!-- Sección de Búsqueda -->
+            <div class="section">
+                <h2>🔍 Buscar Empleado</h2>
+                <div class="search-section">
+                    <div class="form-group">
+                        <label for="buscarNombre">Nombre del Empleado:</label>
+                        <input type="text" id="buscarNombre" placeholder="Ingresa el nombre completo o parte del nombre">
+                    </div>
+                    <button type="button" class="btn" onclick="buscarEmpleado()">Buscar</button>
+                </div>
+                <div id="resultadoBusqueda"></div>
+            </div>
+
+            <!-- Lista de Empleados -->
+            <div class="section">
+                <h2>👥 Lista de Empleados</h2>
+                <div id="listaEmpleados"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
