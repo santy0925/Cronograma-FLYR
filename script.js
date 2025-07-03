@@ -326,6 +326,55 @@ function cargarDatosIniciales() {
             puesto: "Software Engineer",
             equipo: "Core UI",
             dias: ["Lunes","Martes","Miércoles"]
+        }, 
+        {
+            id: 24,
+            nombre: "Cuartas Castano David",
+            puesto: "Software Engineer",
+            equipo: "AM",
+            dias: ["Lunes","Martes","Miércoles"]
+        }, 
+        {
+            id: 25,
+            nombre: "Duque Fernandez Andrés",
+            puesto: "Software Engineer",
+            equipo: "Sun Express",
+            dias: ["Martes", "Miércoles", "Viernes"]
+        }, 
+        {
+            id: 26,
+            nombre: "Duran Londoño Cristian",
+            puesto: "Software Engineer",
+            equipo: "Riyadh",
+            dias: ["Martes", "Jueves", "Viernes"]
+        }, 
+        {
+            id: 27,
+            nombre: "Echeverry Giraldo Daniel",
+            puesto: "Software Engineer",
+            equipo: "Vueling",
+            dias: ["Jueves","Lunes"]
+        }, 
+        {
+            id: 28,
+            nombre: "Eusse López Alejandra",
+            puesto: "Software Engineer",
+            equipo: "Vueling",
+            dias: ["Jueves","Lunes"]
+        }, 
+        {
+            id: 29,
+            nombre: "Florez Cendales Julián",
+            puesto: "Software Engineer",
+            equipo: "Sun Express",
+            dias: ["Martes", "Miércoles", "Viernes"]
+        }, 
+        {
+            id: 30,
+            nombre: "Flórez Chalarca Jimena",
+            puesto: "Product Manager",
+            equipo: "Producto",
+            dias: ["Martes", "Miércoles",]
         }
         
     ];
