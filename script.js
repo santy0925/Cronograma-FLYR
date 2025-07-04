@@ -864,6 +864,279 @@ function cargarDatosIniciales() {
             puesto: "Product Manager",
             equipo: "Producto",
             dias: ["Martes", "Miércoles"]
+        },
+        {
+            id: 101,
+            nombre: "Yánez Malavé Luis",
+            puesto: "Quality Engineer",
+            equipo: "CORE UI",
+            dias: ["Lunes","Martes","Miércoles"]
+        },
+        {
+            id: 102,
+            nombre: "Zuluaga Cardona Jenny",
+            puesto: "Scrum Master",
+            equipo: "Omega - Delta",
+            dias: ["Lunes","Martes","Miércoles"]
+        },
+        {
+            id: 103,
+            nombre: "Castaño Velasquez Jhon Jairo",
+            puesto: "Software Engineer",
+            equipo: "Core I Y II",
+            dias: ["Lunes","Jueves","Viernes"]
+        },
+        {
+            id: 104,
+            nombre: "Rubio Giraldo Danna Vanessa",
+            puesto: "Software Engineer",
+            equipo: "Custom 5",
+            dias: ["Martes","Miércoles", "Jueves"]
+        },
+        {
+            id: 105,
+            nombre: "Rubio Giraldo Danna Vanessa",
+            puesto: "Software Engineer",
+            equipo: "Custom 5",
+            dias: ["Martes","Miércoles", "Jueves"]
+        },
+        {
+            id: 106,
+            nombre: "Naranjo Garcia Alejandra",
+            puesto: "Software Engineer",
+            equipo: "Core I Y II",
+            dias: ["Lunes","Jueves","Viernes"]
+        },
+        {
+            id: 107,
+            nombre: "Salgado Castaño Juan Felipe",
+            puesto: "Software Engineer",
+            equipo: "Diseño",
+            dias: ["N/A"]
+        },
+        {
+            id: 108,
+            nombre: "Aguirre Ocampo Jheidy Lizeth",
+            puesto: "Quality Engineer",
+            equipo: "Custom 1",
+            dias: ["Miercoles", "Jueves", "Viernes"]
+        },
+        {
+            id: 109,
+            nombre: "Gutierrez Rodas Carlos Alberto",
+            puesto: "Software Engineer",
+            equipo: "Core I Y II Transversal AV",
+            dias: ["Lunes","Jueves","Viernes"]
+        },
+        {
+            id: 110,
+            nombre: "Tavera Orozco Natalia",
+            puesto: "Software Engineer",
+            equipo: "Core UI",
+            dias: ["Lunes","Martes","Miércoles"]
+        },
+        {
+            id: 111,
+            nombre: "Mejia Mendoza Jhonatan Alejandro",
+            puesto: "Software Engineer",
+            equipo: "Platform",
+            dias: ["Miercoles", "Jueves", "Viernes"]
+        },
+        {
+            id: 112,
+            nombre: "Mejia Martinez Vanessa Paola",
+            puesto: "Quality Engineer",
+            equipo: "Omega",
+            dias: ["Lunes","Martes","Viernes"]
+        },
+        {
+            id: 113,
+            nombre: "Loaiza Puerta Jorge Luis",
+            puesto: "Software Engineer",
+            equipo: "Riyadh",
+            dias: ["Martes", "Jueves", "Viernes"]
+        },
+        {
+            id: 114,
+            nombre: "Montaño Torres Stefany",
+            puesto: "Quality Engineer",
+            equipo: "Custom 1",
+            dias: ["Miercoles", "Jueves", "Viernes"]
+        },
+        {
+            id: 115,
+            nombre: "Acosta Briceño Frank Sebastian",
+            puesto: "Software Engineer",
+            equipo: "Custom 3",
+            dias: ["Lunes","Jueves","Viernes"]
+        },
+        {
+            id: 116,
+            nombre: "Gomez Montoya Luis Fernando",
+            puesto: "Software Engineer",
+            equipo: "Omega",
+            dias: ["Lunes","Martes","Miercoles"]
+        },
+        {
+            id: 117,
+            nombre: "Rubio Tabarez Hector David",
+            puesto: "Software Engineer",
+            equipo: "Infra de members",
+            dias: ["N/A"]
+        },
+        {
+            id: 118,
+            nombre: "Salazar Giraldo Pedro Pablo",
+            puesto: "Scrum Master",
+            equipo: "Customer Sucess",
+            dias: ["N/A"]
+        },
+        {
+            id: 119,
+            nombre: "Beltran Cardona Juan Manuel",
+            puesto: "Software Engineer",
+            equipo: "Sun Express",
+            dias: ["Martes", "Miércoles", "Viernes"]
+        },
+        {
+            id: 120,
+            nombre: "Grajales Giraldo JuanJose",
+            puesto: "Software Engineer",
+            equipo: "Dynamics",
+            dias: ["Martes", "Miércoles", "Jueves"]
+        },
+        {
+            id: 121,
+            nombre: "Henao Ramirez Eduardo Andres",
+            puesto: "Manager Engineering",
+            equipo: "Custom 3",
+            dias: ["Lunes","Jueves","Viernes"]
+        },
+        {
+            id: 122,
+            nombre: "Cardona Torres Santiago",
+            puesto: "Quality Engineer",
+            equipo: "Sun Express",
+            dias: ["Martes", "Miércoles", "Viernes"]
+        },
+        {
+            id: 123,
+            nombre: "Ocampo Castaño Jose Brayan",
+            puesto: "Quality Engineer",
+            equipo: "Automatizaciones",
+            dias: ["Miercoles","Jueves"]
+        },
+        {
+            id: 124,
+            nombre: "Cano Jaramillo Juan Pablo",
+            puesto: "Application Support Specialist",
+            equipo: "SRE",
+            dias: ["N/A"]
+        },
+        {
+            id: 125,
+            nombre: "Albornoz Rodriguez Julian Andres",
+            puesto: "Manager Engineering",
+            equipo: "Custom 1 - Platform",
+            dias: ["Miercoles", "Jueves", "Viernes"]
+        },
+        {
+            id: 126,
+            nombre: "Rodriguez Huertas Max Frank",
+            puesto: "Director Engineering",
+            equipo: "Transversal",
+            dias: ["N/A"]
+        },
+        {
+            id: 127,
+            nombre: "Fontalvo Salgado Ivan Alberto ",
+            puesto: "Manager Engineering",
+            equipo: "Custom 5 - Dynamics",
+            dias: ["Martes", "Miércoles", "Jueves"]
+        },
+        {
+            id: 128,
+            nombre: "Gonzalez Muñoz Laura Sofia ",
+            puesto: "Software Engineer",
+            equipo: "AM",
+            dias: ["Lunes","Martes","Miércoles"]
+        },
+        {
+            id: 129,
+            nombre: "Cardona Calderon Cesar",
+            puesto: "Intership",
+            equipo: "Sena",
+            dias: ["Lunes","Martes","Miércoles","Jueves","Viernes"]
+        },
+        {
+            id: 130,
+            nombre: "Galvez Restrepo Nelson ",
+            puesto: "Intership",
+            equipo: "Sena",
+            dias: ["Lunes","Martes","Miércoles","Jueves","Viernes"]
+        },
+        {
+            id: 131,
+            nombre: "Bonilla Daniela ",
+            puesto: "Intership",
+            equipo: "Sena",
+            dias: ["Lunes","Martes","Miércoles","Jueves","Viernes"]
+        },
+        {
+            id: 132,
+            nombre: "Diaz Tovar Cristian ",
+            puesto: "Intership",
+            equipo: "Sena",
+            dias: ["Lunes","Martes","Miércoles","Jueves","Viernes"]
+        },
+        {
+            id: 133,
+            nombre: "Moreno Vargas Hernando  ",
+            puesto: "Intership",
+            equipo: "Sena",
+            dias: ["Lunes","Martes","Miércoles","Jueves","Viernes"]
+        },
+        {
+            id: 134,
+            nombre: "Sanchez Arias Fernan",
+            puesto: "Intership",
+            equipo: "Sena",
+            dias: ["Lunes","Martes","Miércoles","Jueves","Viernes"]
+        },
+        {
+            id: 135,
+            nombre: "Sanchez Arias Fernan",
+            puesto: "Intership",
+            equipo: "Sena",
+            dias: ["Lunes","Martes","Miércoles","Jueves","Viernes"]
+        },
+        {
+            id: 136,
+            nombre: "Mejia Alarcon Julian Andres",
+            puesto: "Intership",
+            equipo: "Sena",
+            dias: ["Lunes","Martes","Miércoles","Jueves","Viernes"]
+        },
+        {
+            id: 137,
+            nombre: "Cardona Herrera Santiago",
+            puesto: "Intership",
+            equipo: "Sena",
+            dias: ["Lunes","Martes","Miércoles","Jueves","Viernes"]
+        },
+        {
+            id: 138,
+            nombre: "Osorio Garcia Andres Enrique",
+            puesto: "Ingeniero de Software",
+            equipo: "N/A",
+            dias: ["N/A"]
+        },
+        {
+            id: 139,
+            nombre: "Castellano Paula Alejandra",
+            puesto: "Senior Manager, Engineering",
+            equipo: "Transversal",
+            dias: ["N/A"]
         }
         
     ];
