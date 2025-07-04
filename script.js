@@ -170,7 +170,6 @@ function cargarDatosIniciales() {
             nombre: "Costeño Rivera Esteban",
             puesto: "Software Engineer",
             equipo: "Platform",
-            cantidadEquipo: "3",
             dias: [ "Miercoles", "Jueves", "Viernes" ]
         },
         {
