@@ -375,6 +375,272 @@ function cargarDatosIniciales() {
             puesto: "Product Manager",
             equipo: "Producto",
             dias: ["Martes", "Miércoles",]
+        }, 
+        {
+            id: 31,
+            nombre: "Franco Mejia Felipe",
+            puesto: "Software Engineer",
+            equipo: "Riyadh",
+            dias: ["Martes","Jueves","Viernes"]
+        }, 
+        {
+            id: 32,
+            nombre: "Juyar Galindo Sadai",
+            puesto: "Software Engineer",
+            equipo: "Core UI",
+            dias: ["Lunes","Martes","Miércoles"]
+        }, 
+        {
+            id: 33,
+            nombre: "Galvez Bedoya Santiago",
+            puesto: "Quality Engineer",
+            equipo: "Riyadh",
+            dias: ["Martes", "Jueves", "Viernes"]
+        }, 
+        {
+            id: 34,
+            nombre: "Galvis Aguirre Yohana",
+            puesto: "Quality Engineer",
+            equipo: "Custom 3",
+            dias: ["Lunes","Jueves","Viernes"]
+        }, 
+        {
+            id: 35,
+            nombre: "Galvis Tabares Santiago",
+            puesto: "Quality Engineer",
+            equipo: "Automatizaciones",
+            dias: ["Miercoles","Jueves"]
+        }, 
+        {
+            id: 36,
+            nombre: "Garcia Arango Juan",
+            puesto: "Software Engineer",
+            equipo: "Riyadh",
+            dias: ["Martes", "Jueves", "Viernes"]
+        }, 
+        {
+            id: 37,
+            nombre: "García Giraldo Erika",
+            puesto: "Quality Engineer",
+            equipo: "Custom 3",
+            dias: ["Lunes","Jueves","Viernes"]
+        }, 
+        {
+            id: 38,
+            nombre: "García Grisales Sandra",
+            puesto: "Software Engineer",
+            equipo: "Custom 1",
+            dias: ["Miercoles","Jueves","Viernes"]
+        }, 
+        {
+            id: 39,
+            nombre: "Giron Casierra William Alejandro",
+            puesto: "Software Engineer",
+            equipo: "Dynamics",
+            dias: ["Martes", "Miércoles", "Jueves"]
+        }, 
+        {
+            id: 40,
+            nombre: "Gomez Ramirez Diego Bernabé",
+            puesto: "Software Engineer",
+            equipo: "Delta",
+            dias: ["Lunes","Martes","Miércoles"]
+        }, 
+        {
+            id: 41,
+            nombre: "Gomez Ramirez Diego Bernabé",
+            puesto: "Software Engineer",
+            equipo: "Delta",
+            dias: ["Lunes","Martes","Miércoles"]
+        }, 
+        {
+            id: 42,
+            nombre: "Gómez Castrillon Cindy",
+            puesto: "Scrum Master",
+            equipo: "Cyprus",
+            dias: ["Miercoles", "Jueves", "Viernes"]
+        }, 
+        {
+            id: 43,
+            nombre: "Cumbal Benavides Andrea",
+            puesto: "Scrum Master",
+            equipo: "Riyadh",
+            dias: ["Martes", "Jueves", "Viernes"]
+        }, 
+        {
+            id: 44,
+            nombre: "Gomez Mercado Sara",
+            puesto: "Project Manager",
+            equipo: "Sun Express",
+            dias: ["Martes", "Miércoles", "Viernes"]
+        }, 
+        {
+            id: 45,
+            nombre: "Gomez Tangarife Erika",
+            puesto: "IT",
+            equipo: "TI",
+            dias: ["N/A"]
+        }, 
+        {
+            id: 46,
+            nombre: "González Hernández Leidy",
+            puesto: "Quality Engineer",
+            equipo: "Core I Y II",
+            dias: ["Lunes","Jueves","Viernes"]
+        }, 
+        {
+            id: 47,
+            nombre: "Gonzalez Lopez Daniela",
+            puesto: "Quality Engineer",
+            equipo: "Producto",
+            dias: ["Martes","Miércoles"]
+        }, 
+        {
+            id: 48,
+            nombre: "Rojas Tovar Angela",
+            puesto: "Quality Engineer",
+            equipo: "Dynamics",
+            dias: ["Remoto"]
+        }, 
+        {
+            id: 49,
+            nombre: "Gonzalez Tamayo Andres",
+            puesto: "Quality Engineer",
+            equipo: "Automatizaciones",
+            dias: ["Miercoles","Jueves"]
+        },
+        {
+            id: 50,
+            nombre: "Grajales Sanchez Miguel",
+            puesto: "Software Engineer",
+            equipo: "Riyadh",
+            dias: ["Martes", "Jueves", "Viernes"]
+        },
+        {
+            id: 51,
+            nombre: "Guerrero Kevin",
+            puesto: "Software Engineer",
+            equipo: "Core UI",
+            dias: ["Lunes","Martes","Miércoles"]
+        },
+        {
+            id: 52,
+            nombre: "Gutierrez Franco Nataly",
+            puesto: "Scrum Master",
+            equipo: "Vueling",
+            dias: ["Jueves","Lunes"]
+        },
+        {
+            id: 53,
+            nombre: "Henao Alexandra",
+            puesto: "Product Manager",
+            equipo: "Producto",
+            dias: ["Martes","Miércoles"]
+        },
+        {
+            id: 54,
+            nombre: "Henao Burgos Jimena",
+            puesto: "Quality Engineer",
+            equipo: "Platform",
+            dias: ["Miercoles", "Jueves", "Viernes"]
+        },
+        {
+            id: 55,
+            nombre: "Hernandez Arias David",
+            puesto: "Software Engineer",
+            equipo: "Vueling",
+            dias: ["Jueves","Lunes"]
+        },
+        {
+            id: 56,
+            nombre: "Hernandez Rendon Luisa",
+            puesto: "Quality Engineer",
+            equipo: "Vueling",
+            dias: ["Jueves","Lunes"]
+        },
+        {
+            id: 57,
+            nombre: "Herrera Quintero Camila",
+            puesto: "Quality Engineer",
+            equipo: "Custom 5",
+            dias: ["Martes","Miércoles", "Jueves"]
+        },
+        {
+            id: 58,
+            nombre: "Infante Angie Carolina",
+            puesto: "Quality Engineer",
+            equipo: "Riyadh",
+            dias: ["Martes", "Jueves", "Viernes"]
+        },
+        {
+            id: 59,
+            nombre: "Loaiza Bedoya Manuela",
+            puesto: "Quality Engineer",
+            equipo: "Custom 5",
+            dias: ["Martes","Miércoles", "Jueves"]
+        },
+        {
+            id: 60,
+            nombre: "Loaiza Agudelo Santiago",
+            puesto: "Quality Engineer",
+            equipo: "AM",
+            dias: ["Lunes","Martes","Miércoles"]
+        },
+        {
+            id: 61,
+            nombre: "Loaiza Sanchez Leydi Johana",
+            puesto: "Project Manager",
+            equipo: "Message ",
+            dias: ["Miercoles", "Jueves", "Viernes"]
+        },
+        {
+            id: 62,
+            nombre: "Londoño González Angela",
+            puesto: "Quality Engineer",
+            equipo: "Vueling",
+            dias: ["Jueves","Lunes"]
+        },
+        {
+            id: 63,
+            nombre: "Londoño Holguin Maria Fernanda",
+            puesto: "Quality Engineer",
+            equipo: "Transversal",
+            dias: ["N/A"]
+        },
+        {
+            id: 64,
+            nombre: "López Diana Lorena",
+            puesto: "Quality Engineer",
+            equipo: "Sun Express",
+            dias: ["Martes", "Miércoles", "Viernes"]
+        },
+        {
+            id: 65,
+            nombre: "Lopez Katherine",
+            puesto: "Business Analyst",
+            equipo: "Producto",
+            dias: ["Martes", "Miércoles"]
+        },
+        {
+            id: 66,
+            nombre: "Lopez Hoyos Víctor",
+            puesto: "Quality Engineer",
+            equipo: "Riyadh",
+            dias: ["Martes", "Jueves", "Viernes"]
+        },
+        {
+            id: 67,
+            nombre: "Mejia Buitrago Daniela",
+            puesto: "Software Engineer",
+            equipo: "Custom 2",
+            dias: ["N/A"]
+        },
+        {
+            id: 68,
+            nombre: "Molina Cadavid Sergio",
+            puesto: "Software Engineer",
+            equipo: "Delta",
+            dias: ["Lunes","Martes","Miércoles"]
         }
         
     ];
