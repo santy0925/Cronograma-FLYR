@@ -641,6 +641,230 @@ function cargarDatosIniciales() {
             puesto: "Software Engineer",
             equipo: "Delta",
             dias: ["Lunes","Martes","Miércoles"]
+        },
+        {
+            id: 69,
+            nombre: "Montes Londoño Cristian",
+            puesto: "Software Engineer",
+            equipo: "AM",
+            dias: ["Lunes","Martes","Miércoles"]
+        },
+        {
+            id: 70,
+            nombre: "Morales Herrera Juan",
+            puesto: "Software Engineer",
+            equipo: "CORE UI",
+            dias: ["Lunes","Martes","Miércoles"]
+        },
+        {
+            id: 71,
+            nombre: "Morales Marin Juliana",
+            puesto: "Project Manager",
+            equipo: "N/A",
+            dias: ["N/A"]
+        },
+        {
+            id: 72,
+            nombre: "Morales Velez Sebastian",
+            puesto: "Software Engineer",
+            equipo: "Vueling",
+            dias: ["Jueves","Lunes"]
+        },
+        {
+            id: 73,
+            nombre: "Ocampo Parra Melissa",
+            puesto: "Business Analyst",
+            equipo: "Producto",
+            dias: ["Martes", "Miércoles"]
+        },
+        {
+            id: 74,
+            nombre: "Ortega Cupacan Cristian",
+            puesto: "Software Engineer",
+            equipo: "Riyadh",
+            dias: ["Martes", "Jueves", "Viernes"]
+        },
+        {
+            id: 75,
+            nombre: "Osorio Giraldo Maria Fernanda",
+            puesto: "Business Analyst",
+            equipo: "Core I Y II",
+            dias: ["Lunes","Jueves","Viernes"]
+        },
+        {
+            id: 76,
+            nombre: "Ospina Colorado Néstor",
+            puesto: "Software Engineer",
+            equipo: "Riyadh",
+            dias: ["Martes", "Jueves", "Viernes"]
+        },
+        {
+            id: 77,
+            nombre: "Ospina Londoño Fabiana",
+            puesto: "Quality Engineer",
+            equipo: "Riyadh",
+            dias: ["Martes", "Jueves", "Viernes"]
+        },
+        {
+            id: 78,
+            nombre: "Pineda Salas Deivinson",
+            puesto: "Software Engineer",
+            equipo: "Riyadh",
+            dias: ["Martes", "Jueves", "Viernes"]
+        },
+        {
+            id: 79,
+            nombre: "Pineda Vasquez Juliana",
+            puesto: "Quality Engineer",
+            equipo: "Vueling",
+            dias: ["Jueves","Lunes"]
+        },
+        {
+            id: 80,
+            nombre: "Posada Garcia William",
+            puesto: "Software Engineer",
+            equipo: "Consilium",
+            dias: ["Jueves","Viernes"]
+        },
+        {
+            id: 81,
+            nombre: "Posada Mejias Jerel",
+            puesto: "Software Engineer",
+            equipo: "Vueling",
+            dias: ["Jueves","Lunes"]
+        },
+        {
+            id: 82,
+            nombre: "Reina Becerra Juan Pablo",
+            puesto: "Software Engineer",
+            equipo: "Dynamics",
+            dias: ["Martes", "Miércoles", "Jueves"]
+        },
+        {
+            id: 83,
+            nombre: "Renteria Gutierrez Santiago",
+            puesto: "Software Engineer",
+            equipo: "Core UI",
+            dias: ["Lunes","Martes","Miércoles"]
+        },
+        {
+            id: 84,
+            nombre: "Rios Cardona Yamid",
+            puesto: "Software Engineer",
+            equipo: "Sun Express",
+            dias: ["Martes", "Miércoles", "Viernes"]
+        },
+        {
+            id: 85,
+            nombre: "Rivera Castrillón Liseth",
+            puesto: "Scrum Master",
+            equipo: "Custom 5 - Dynamics",
+            dias: ["Martes", "Miércoles", "Jueves"]
+        },
+        {
+            id: 86,
+            nombre: "Robles Ocampo Luis",
+            puesto: "Software Engineer",
+            equipo: "Riyadh",
+            dias: ["Martes", "Jueves", "Viernes"]
+        },
+        {
+            id: 87,
+            nombre: "Rodriguez Pineda Johana",
+            puesto: "Project Manager",
+            equipo: "Producto",
+            dias: ["Martes", "Miércoles"]
+        },
+        {
+            id: 88,
+            nombre: "Salazar Rendón Fabio",
+            puesto: "Software Engineer",
+            equipo: "Vueling",
+            dias: ["Jueves","Lunes"]
+        },
+        {
+            id: 89,
+            nombre: "Sánchez Cortés Jhon",
+            puesto: "Software Engineer",
+            equipo: "Riyadh",
+            dias: ["Martes", "Jueves", "Viernes"]
+        },
+        {
+            id: 90,
+            nombre: "Sánchez Valencia Carol",
+            puesto: "Scrum Master",
+            equipo: "AM",
+            dias: ["Lunes","Martes","Miércoles"]
+        },
+        {
+            id: 91,
+            nombre: "Sanchéz Valencia Daiam",
+            puesto: "Quality Engineer",
+            equipo: "Custom 3",
+            dias: ["Lunes","Jueves","Viernes"]
+        },
+        {
+            id: 92,
+            nombre: "Sanchez Velasquez Paola",
+            puesto: "Quality Engineer",
+            equipo: "Custom 3",
+            dias: ["Lunes","Jueves","Viernes"]
+        },
+        {
+            id: 93,
+            nombre: "Sanchez Yepes Carolina",
+            puesto: "Product Manager",
+            equipo: "Transversal",
+            dias: ["N/A"]
+        },
+        {
+            id: 94,
+            nombre: "Valencia Betancur Leonardo",
+            puesto: "Software Engineer",
+            equipo: "Custom 3",
+            dias: ["Lunes","Jueves","Viernes"]
+        },
+        {
+            id: 95,
+            nombre: "Valencia Martinez Sandra",
+            puesto: "Manager",
+            equipo: "Gerente",
+            dias: ["N/A"]
+        },
+        {
+            id: 96,
+            nombre: "Valencia Valencia Jerson",
+            puesto: "Software Engineer",
+            equipo: "Platform",
+            dias: ["Miercoles", "Jueves", "Viernes"]
+        },
+        {
+            id: 97,
+            nombre: "Villalba Ballesteros Luis Felipe ",
+            puesto: "Software Engineer",
+            equipo: "AM",
+            dias: ["Lunes","Martes","Miércoles"]
+        },
+        {
+            id: 98,
+            nombre: "Velasco Roman Brayan",
+            puesto: "Project Manager",
+            equipo: "Custom 1 - Platform",
+            dias: ["Miercoles", "Jueves", "Viernes"]
+        },
+        {
+            id: 99,
+            nombre: "Velasquez Quintero Sebastians",
+            puesto: "Software Engineer",
+            equipo: "Core UI",
+            dias: ["Lunes","Martes","Miércoles"]
+        },
+        {
+            id: 100,
+            nombre: "Villa Valencia Natalia",
+            puesto: "Product Manager",
+            equipo: "Producto",
+            dias: ["Martes", "Miércoles"]
         }
         
     ];
