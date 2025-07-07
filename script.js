@@ -446,13 +446,6 @@ function cargarDatosIniciales() {
             dias: ["Lunes","Martes","Miércoles"]
         }, 
         {
-            id: 41,
-            nombre: "Gomez Ramirez Diego Bernabé",
-            puesto: "Software Engineer",
-            equipo: "Delta",
-            dias: ["Lunes","Martes","Miércoles"]
-        }, 
-        {
             id: 42,
             nombre: "Gómez Castrillon Cindy",
             puesto: "Scrum Master",
@@ -1098,13 +1091,6 @@ function cargarDatosIniciales() {
         },
         {
             id: 134,
-            nombre: "Sanchez Arias Fernan",
-            puesto: "Intership",
-            equipo: "Sena",
-            dias: ["Lunes","Martes","Miércoles","Jueves","Viernes"]
-        },
-        {
-            id: 135,
             nombre: "Sanchez Arias Fernan",
             puesto: "Intership",
             equipo: "Sena",
