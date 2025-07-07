@@ -247,7 +247,7 @@ function cargarDatosIniciales() {
             nombre: "Betancourt Montoya Gewralds",
             puesto: "Software Engineer",
             equipo: "Riyadh",
-            dias: ["Martes","Jueves", "Viernes"]
+            dias: ["Martes","Jueves","Viernes"]
         },
         {
             id: 13,
@@ -286,7 +286,7 @@ function cargarDatosIniciales() {
         }, 
         {
             id: 18,
-            nombre: "Cañón Peña Yurani",
+            nombre: "Cañon Peña Yurani",
             puesto: "Scrum Master",
             equipo: "Core UI",
             dias: ["Lunes", "Martes", "Miercoles"]
@@ -335,7 +335,7 @@ function cargarDatosIniciales() {
         }, 
         {
             id: 25,
-            nombre: "Duque Fernandez Andrés",
+            nombre: "Duque Fernandez Andres",
             puesto: "Software Engineer",
             equipo: "Sun Express",
             dias: ["Martes", "Miércoles", "Viernes"]
@@ -356,21 +356,21 @@ function cargarDatosIniciales() {
         }, 
         {
             id: 28,
-            nombre: "Eusse López Alejandra",
+            nombre: "Eusse Lopez Alejandra",
             puesto: "Software Engineer",
             equipo: "Vueling",
             dias: ["Lunes","Jueves"]
         }, 
         {
             id: 29,
-            nombre: "Florez Cendales Julián",
+            nombre: "Florez Cendales Julian",
             puesto: "Software Engineer",
             equipo: "Sun Express",
             dias: ["Martes", "Miércoles", "Viernes"]
         }, 
         {
             id: 30,
-            nombre: "Flórez Chalarca Jimena",
+            nombre: "Florez Chalarca Jimena",
             puesto: "Product Manager",
             equipo: "Producto",
             dias: ["Martes", "Miércoles",]
@@ -419,14 +419,14 @@ function cargarDatosIniciales() {
         }, 
         {
             id: 37,
-            nombre: "García Giraldo Erika",
+            nombre: "Garcia Giraldo Erika",
             puesto: "Quality Engineer",
             equipo: "Custom 3",
             dias: ["Lunes","Jueves","Viernes"]
         }, 
         {
             id: 38,
-            nombre: "García Grisales Sandra",
+            nombre: "Garcia Grisales Sandra",
             puesto: "Software Engineer",
             equipo: "Custom 1",
             dias: ["Miercoles","Jueves","Viernes"]
@@ -440,14 +440,14 @@ function cargarDatosIniciales() {
         }, 
         {
             id: 40,
-            nombre: "Gomez Ramirez Diego Bernabé",
+            nombre: "Gomez Ramirez Diego Bernabe",
             puesto: "Software Engineer",
             equipo: "Delta",
             dias: ["Lunes","Martes","Miércoles"]
         }, 
         {
             id: 42,
-            nombre: "Gómez Castrillon Cindy",
+            nombre: "Gomez Castrillon Cindy",
             puesto: "Scrum Master",
             equipo: "Cyprus",
             dias: ["Miercoles", "Jueves", "Viernes"]
@@ -475,7 +475,7 @@ function cargarDatosIniciales() {
         }, 
         {
             id: 46,
-            nombre: "González Hernández Leidy",
+            nombre: "Gonzalez Hernandez Leidy",
             puesto: "Quality Engineer",
             equipo: "Core I Y II",
             dias: ["Lunes","Jueves","Viernes"]
@@ -587,7 +587,7 @@ function cargarDatosIniciales() {
         },
         {
             id: 62,
-            nombre: "Londoño González Angela",
+            nombre: "Londoño Gonzalez Angela",
             puesto: "Quality Engineer",
             equipo: "Vueling",
             dias: ["Lunes","Jueves"]
@@ -601,7 +601,7 @@ function cargarDatosIniciales() {
         },
         {
             id: 64,
-            nombre: "López Diana Lorena",
+            nombre: "Lopez Diana Lorena",
             puesto: "Quality Engineer",
             equipo: "Sun Express",
             dias: ["Martes", "Miércoles", "Viernes"]
@@ -615,7 +615,7 @@ function cargarDatosIniciales() {
         },
         {
             id: 66,
-            nombre: "Lopez Hoyos Víctor",
+            nombre: "Lopez Hoyos Victor",
             puesto: "Quality Engineer",
             equipo: "Riyadh",
             dias: ["Martes", "Jueves", "Viernes"]
@@ -685,7 +685,7 @@ function cargarDatosIniciales() {
         },
         {
             id: 76,
-            nombre: "Ospina Colorado Néstor",
+            nombre: "Ospina Colorado Nestor",
             puesto: "Software Engineer",
             equipo: "Riyadh",
             dias: ["Martes", "Jueves", "Viernes"]
@@ -748,7 +748,7 @@ function cargarDatosIniciales() {
         },
         {
             id: 85,
-            nombre: "Rivera Castrillón Liseth",
+            nombre: "Rivera Castrillon Liseth",
             puesto: "Scrum Master",
             equipo: "Custom 5 - Dynamics",
             dias: ["Martes", "Miércoles", "Jueves"]
@@ -769,28 +769,28 @@ function cargarDatosIniciales() {
         },
         {
             id: 88,
-            nombre: "Salazar Rendón Fabio",
+            nombre: "Salazar Rendon Fabio",
             puesto: "Software Engineer",
             equipo: "Vueling",
             dias: ["Lunes","Jueves"]
         },
         {
             id: 89,
-            nombre: "Sánchez Cortés Jhon",
+            nombre: "Sanchez Cortes Jhon",
             puesto: "Software Engineer",
             equipo: "Riyadh",
             dias: ["Martes", "Jueves", "Viernes"]
         },
         {
             id: 90,
-            nombre: "Sánchez Valencia Carol",
+            nombre: "Sanchez Valencia Carol",
             puesto: "Scrum Master",
             equipo: "AM",
             dias: ["Lunes","Martes","Miércoles"]
         },
         {
             id: 91,
-            nombre: "Sanchéz Valencia Daiam",
+            nombre: "Sanchez Valencia Daiam",
             puesto: "Quality Engineer",
             equipo: "Custom 3",
             dias: ["Lunes","Jueves","Viernes"]
@@ -846,7 +846,7 @@ function cargarDatosIniciales() {
         },
         {
             id: 99,
-            nombre: "Velasquez Quintero Sebastians",
+            nombre: "Velasquez Quintero Sebastian",
             puesto: "Software Engineer",
             equipo: "Core UI",
             dias: ["Lunes","Martes","Miércoles"]
