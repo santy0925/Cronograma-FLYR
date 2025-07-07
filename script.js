@@ -860,7 +860,7 @@ function cargarDatosIniciales() {
         },
         {
             id: 101,
-            nombre: "Yánez Malavé Luis",
+            nombre: "Yanez Malave Luis",
             puesto: "Quality Engineer",
             equipo: "CORE UI",
             dias: ["Lunes","Martes","Miércoles"]
