@@ -191,14 +191,14 @@ function cargarDatosIniciales() {
             nombre: "Alarcon Garcia Juliana",
             puesto: "Quality Engineer",
             equipo: "Custom 3",
-            dias: ["Martes", "Miércoles","Viernes"]
+            dias: ["Lunes","Jueves","Viernes"]
         },
         {
             id: 5,
             nombre: "Alzate Zapata Valentina",
             puesto: "Business Analyst",
             equipo: "Producto",
-            dias: ["Jueves", "Viernes"]
+            dias: ["Martes", "Miercoles"]
         },
         {
             id: 6,
@@ -212,7 +212,7 @@ function cargarDatosIniciales() {
             nombre: "Arbelaez Calle Alejandro",
             puesto: "Software Engineer",
             equipo: "Consilium",
-            dias: ["Lunes", "Miércoles", "Viernes", "Domingo"]
+            dias: ["Jueves","Viernes"]
         },
         {
             id: 8,
@@ -352,14 +352,14 @@ function cargarDatosIniciales() {
             nombre: "Echeverry Giraldo Daniel",
             puesto: "Software Engineer",
             equipo: "Vueling",
-            dias: ["Jueves","Lunes"]
+            dias: ["Lunes","Jueves"]
         }, 
         {
             id: 28,
             nombre: "Eusse López Alejandra",
             puesto: "Software Engineer",
             equipo: "Vueling",
-            dias: ["Jueves","Lunes"]
+            dias: ["Lunes","Jueves"]
         }, 
         {
             id: 29,
@@ -520,7 +520,7 @@ function cargarDatosIniciales() {
             nombre: "Gutierrez Franco Nataly",
             puesto: "Scrum Master",
             equipo: "Vueling",
-            dias: ["Jueves","Lunes"]
+            dias: ["Lunes","Jueves"]
         },
         {
             id: 53,
@@ -541,14 +541,14 @@ function cargarDatosIniciales() {
             nombre: "Hernandez Arias David",
             puesto: "Software Engineer",
             equipo: "Vueling",
-            dias: ["Jueves","Lunes"]
+            dias: ["Lunes","Jueves"]
         },
         {
             id: 56,
             nombre: "Hernandez Rendon Luisa",
             puesto: "Quality Engineer",
             equipo: "Vueling",
-            dias: ["Jueves","Lunes"]
+            dias: ["Lunes","Jueves"]
         },
         {
             id: 57,
@@ -590,7 +590,7 @@ function cargarDatosIniciales() {
             nombre: "Londoño González Angela",
             puesto: "Quality Engineer",
             equipo: "Vueling",
-            dias: ["Jueves","Lunes"]
+            dias: ["Lunes","Jueves"]
         },
         {
             id: 63,
@@ -660,7 +660,7 @@ function cargarDatosIniciales() {
             nombre: "Morales Velez Sebastian",
             puesto: "Software Engineer",
             equipo: "Vueling",
-            dias: ["Jueves","Lunes"]
+            dias: ["Lunes","Jueves"]
         },
         {
             id: 73,
@@ -709,7 +709,7 @@ function cargarDatosIniciales() {
             nombre: "Pineda Vasquez Juliana",
             puesto: "Quality Engineer",
             equipo: "Vueling",
-            dias: ["Jueves","Lunes"]
+            dias: ["Lunes","Jueves"]
         },
         {
             id: 80,
@@ -772,7 +772,7 @@ function cargarDatosIniciales() {
             nombre: "Salazar Rendón Fabio",
             puesto: "Software Engineer",
             equipo: "Vueling",
-            dias: ["Jueves","Lunes"]
+            dias: ["Lunes","Jueves"]
         },
         {
             id: 89,
