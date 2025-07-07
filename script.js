@@ -167,7 +167,7 @@ function cargarDatosIniciales() {
     empleados = [
         {
             id: 1,
-            nombre: "Costeño Rivera Esteban",
+            nombre: "Castaño Rivera Esteban",
             puesto: "Software Engineer",
             equipo: "Platform",
             dias: [ "Miercoles", "Jueves", "Viernes" ]
@@ -881,13 +881,6 @@ function cargarDatosIniciales() {
         },
         {
             id: 104,
-            nombre: "Rubio Giraldo Danna Vanessa",
-            puesto: "Software Engineer",
-            equipo: "Custom 5",
-            dias: ["Martes","Miércoles", "Jueves"]
-        },
-        {
-            id: 105,
             nombre: "Rubio Giraldo Danna Vanessa",
             puesto: "Software Engineer",
             equipo: "Custom 5",
