@@ -723,7 +723,7 @@ function cargarDatosIniciales() {
             nombre: "Posada Mejias Jerel",
             puesto: "Software Engineer",
             equipo: "Vueling",
-            dias: ["Jueves","Lunes"]
+            dias: ["Lunes","Jueves"]
         },
         {
             id: 82,
