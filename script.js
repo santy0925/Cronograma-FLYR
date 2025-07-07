@@ -184,7 +184,7 @@ function cargarDatosIniciales() {
             nombre: "Alarcon Garcia Emilia",
             puesto: "Quality Engineer",
             equipo: "Riyadh",
-            dias: ["Lunes", "Miercoles", "Jueves"]
+            dias: ["Martes", "Jueves", "Viernes"]
         },
         {
             id: 4,
@@ -205,7 +205,7 @@ function cargarDatosIniciales() {
             nombre: "Arango Ramirez Luisa",
             puesto: "Quality Engineer",
             equipo: "Infras",
-            dias: ["Lunes","Martes", "Viernes",]
+            dias: ["Miercoles", "Jueves", "Viernes"]
         },
         {
             id: 7,
@@ -289,7 +289,7 @@ function cargarDatosIniciales() {
             nombre: "Cañón Peña Yurani",
             puesto: "Scrum Master",
             equipo: "Core UI",
-            dias: ["Lunes", "Jueves", "Viernes"]
+            dias: ["Lunes", "Martes", "Miercoles"]
         }, 
         {
             id: 19,
@@ -933,7 +933,7 @@ function cargarDatosIniciales() {
             nombre: "Mejia Martinez Vanessa Paola",
             puesto: "Quality Engineer",
             equipo: "Omega",
-            dias: ["Lunes","Martes","Viernes"]
+            dias: ["Lunes","Martes","Miercoles"]
         },
         {
             id: 113,
@@ -968,7 +968,7 @@ function cargarDatosIniciales() {
             nombre: "Rubio Tabarez Hector David",
             puesto: "Software Engineer",
             equipo: "Infra de members",
-            dias: ["N/A"]
+            dias: ["Miércoles", "Jueves", "Viernes"]
         },
         {
             id: 118,
