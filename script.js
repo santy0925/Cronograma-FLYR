@@ -13,12 +13,21 @@ function inicializarEventos() {
     // Evento para el formulario de registro
     document.getElementById('employeeForm').addEventListener('submit', registrarEmpleado);
     
-    // Evento para búsqueda en tiempo real
+    // Evento para búsqueda en tiempo real por nombre
     document.getElementById('buscarNombre').addEventListener('input', function() {
         if (this.value.length >= 2) {
             buscarEmpleado();
         } else if (this.value.length === 0) {
             document.getElementById('resultadoBusqueda').innerHTML = '';
+        }
+    });
+
+    // Evento para búsqueda en tiempo real por equipo
+    document.getElementById('buscarEquipo').addEventListener('input', function() {
+        if (this.value.length >= 2) {
+            buscarPorEquipo();
+        } else if (this.value.length === 0) {
+            document.getElementById('resultadoBusquedaEquipo').innerHTML = '';
         }
     });
 }
@@ -28,9 +37,13 @@ function registrarEmpleado(e) {
     e.preventDefault();
     
     const nombre = document.getElementById('nombre').value.trim();
-    const puesto = document.getElementById('puesto').value.trim();
+    const cargo = document.getElementById('cargo').value.trim(); // Changed from puesto to cargo
     const equipo = document.getElementById('equipo').value.trim();
-    
+    const ciudad = document.getElementById('ciudad').value.trim();
+    const region = document.getElementById('region').value.trim();
+    const tipoAsistencia = document.getElementById('tipoAsistencia').value.trim();
+    const genero = document.getElementById('genero').value.trim();
+
     // Obtener días seleccionados
     const diasCheckboxes = document.querySelectorAll('input[name="dias"]:checked');
     const dias = Array.from(diasCheckboxes).map(cb => cb.value);
@@ -52,8 +65,12 @@ function registrarEmpleado(e) {
     const empleado = {
         id: Date.now(),
         nombre: nombre,
-        puesto: puesto,
+        cargo: cargo, // Changed from puesto to cargo
         equipo: equipo,
+        ciudad: ciudad,
+        region: region,
+        tipoAsistencia: tipoAsistencia,
+        genero: genero,
         dias: dias
     };
     
@@ -79,7 +96,7 @@ function mostrarMensaje(mensaje, tipo) {
     }, 3000);
 }
 
-// Función para buscar empleado
+// Función para buscar empleado por nombre
 function buscarEmpleado() {
     const nombre = document.getElementById('buscarNombre').value.trim().toLowerCase();
     const resultadoDiv = document.getElementById('resultadoBusqueda');
@@ -108,16 +125,57 @@ function buscarEmpleado() {
     resultadoDiv.innerHTML = html;
 }
 
+// Función para buscar empleado por equipo
+function buscarPorEquipo() {
+    const equipo = document.getElementById('buscarEquipo').value.trim().toLowerCase();
+    const resultadoDiv = document.getElementById('resultadoBusquedaEquipo');
+
+    if (!equipo) {
+        resultadoDiv.innerHTML = '<div class="error-message">Por favor ingresa un equipo para buscar.</div>';
+        return;
+    }
+
+    // Buscar empleados que coincidan con el equipo
+    const empleadosEncontrados = empleados.filter(emp =>
+        emp.equipo.toLowerCase().includes(equipo)
+    );
+
+    if (empleadosEncontrados.length === 0) {
+        resultadoDiv.innerHTML = '<div class="error-message">No se encontró ningún empleado en ese equipo.</div>';
+        return;
+    }
+
+    // Mostrar resultados
+    let html = '';
+    empleadosEncontrados.forEach(emp => {
+        html += crearTarjetaEmpleado(emp);
+    });
+
+    resultadoDiv.innerHTML = html;
+}
+
 // Función para crear tarjeta de empleado
 function crearTarjetaEmpleado(empleado) {
     return `
         <div class="employee-info">
             <h3>👤 ${empleado.nombre}</h3>
             <div class="info-item">
-                <strong>Puesto:</strong> ${empleado.puesto}
+                <strong>Cargo:</strong> ${empleado.cargo}
             </div>
             <div class="info-item">
                 <strong>Equipo:</strong> ${empleado.equipo}
+            </div>
+            <div class="info-item">
+                <strong>Ciudad:</strong> ${empleado.ciudad}
+            </div>
+            <div class="info-item">
+                <strong>Región:</strong> ${empleado.region}
+            </div>
+            <div class="info-item">
+                <strong>Tipo de Asistencia:</strong> ${empleado.tipoAsistencia}
+            </div>
+            <div class="info-item">
+                <strong>Género:</strong> ${empleado.genero}
             </div>
             <div class="info-item">
                 <strong>Días de trabajo:</strong> 
@@ -142,7 +200,7 @@ function actualizarListaEmpleados() {
     empleados.forEach(emp => {
         html += `
             <div class="employee-card" onclick="mostrarDetalleEmpleado('${emp.nombre}')">
-                <strong>${emp.nombre}</strong> - ${emp.puesto} (${emp.equipo})
+                <strong>${emp.nombre}</strong> - ${emp.cargo} (${emp.equipo})
             </div>
         `;
     });
@@ -168,953 +226,1497 @@ function cargarDatosIniciales() {
         {
             id: 1,
             nombre: "Castaño Rivera Esteban",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Platform",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: [ "Miercoles", "Jueves", "Viernes" ]
         },
         {
             id: 2,
             nombre: "Acero Duarte Marisol",
-            puesto: "Head of Quality Manager",
+            cargo: "Head of Quality Manager",
             equipo: "Transversal",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Femenino",
             dias: ["Lunes", "Martes", "Jueves"]
         },
         {
             id: 3,
             nombre: "Alarcon Garcia Emilia",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Riyadh",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Femenino",
             dias: ["Martes", "Jueves", "Viernes"]
         },
         {
             id: 4,
             nombre: "Alarcon Garcia Juliana",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Custom 3",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Femenino",
             dias: ["Lunes","Jueves","Viernes"]
         },
         {
             id: 5,
             nombre: "Alzate Zapata Valentina",
-            puesto: "Business Analyst",
+            cargo: "Business Analyst",
             equipo: "Producto",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Femenino",
             dias: ["Martes", "Miercoles"]
         },
         {
             id: 6,
             nombre: "Arango Ramirez Luisa",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Infras",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Femenino",
             dias: ["Miercoles", "Jueves", "Viernes"]
         },
         {
             id: 7,
             nombre: "Arbelaez Calle Alejandro",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Consilium",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Jueves","Viernes"]
         },
         {
             id: 8,
             nombre: "Arias Escudero Nicolas",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Custom 5",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Masculino",
             dias: ["Martes", "Miércoles", "Jueves"]
         },
         {
             id: 9,
             nombre: "Arias Valencia John",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Core UI ",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Lunes","Martes","Miércoles"]
         },
         {
             id: 10,
             nombre: "Aristizabal Andres",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Custom 5",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Masculino",
             dias: ["Martes", "Miércoles", "Jueves"]
         },
         {
             id: 11,
             nombre: "Benavides Guevara Paula",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Cyprus",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Femenino",
             dias: ["Miércoles", "Jueves", "Viernes"]
         },
         {
             id: 12,
             nombre: "Betancourt Montoya Gewralds",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Riyadh",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Masculino",
             dias: ["Martes","Jueves","Viernes"]
         },
         {
             id: 13,
             nombre: "Bocanegra Acosta Natalia",
-            puesto: "Product Manager",
+            cargo: "Product Manager",
             equipo: "Producto",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Femenino",
             dias: ["Martes","Miércoles"]
         },
         {
             id: 14,
             nombre: "Buitrago Ramirez Darwin",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Core I Y II",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Masculino",
             dias: ["Lunes","Jueves","Viernes"]
         },
         {
             id: 15,
             nombre: "Buritica Atehortua Oscar",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Riyadh",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Martes", "Jueves", "Viernes"]
         },
         {
             id: 16,
             nombre: "Bustamante Rojas Cristian",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Vueling",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Masculino",
             dias: ["Lunes","Jueves"]
         }, 
         {
             id: 17,
             nombre: "Calderon Carranza George",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Custom 5",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Martes","Miercoles","Jueves"]
         }, 
         {
             id: 18,
             nombre: "Cañon Peña Yurani",
-            puesto: "Scrum Master",
+            cargo: "Scrum Master",
             equipo: "Core UI",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Femenino",
             dias: ["Lunes", "Martes", "Miercoles"]
         }, 
         {
             id: 19,
             nombre: "Cardona Mendoza Birman",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Members",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Miércoles", "Jueves", "Viernes"]
         }, 
         {
             id: 20,
             nombre: "Carreño Alvarez Elizabeth",
-            puesto: "Business Analyst",
+            cargo: "Business Analyst",
             equipo: "Producto",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Femenino",
             dias: ["Martes","Miércoles"]
         }, 
         {
             id: 21,
             nombre: "Castaño Serna Juan",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Custom 5",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Martes","Miércoles", "Jueves"]
         }, 
         {
             id: 22,
             nombre: "Ceballos Rojas Diego Fernando",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Sun Express",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Masculino",
             dias: ["Martes", "Miércoles", "Viernes"]
         }, 
         {
             id: 23,
             nombre: "Cruz Barrera Christian David",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Core UI",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Lunes","Martes","Miércoles"]
         }, 
         {
             id: 24,
             nombre: "Cuartas Castano David",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "AM",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Masculino",
             dias: ["Lunes","Martes","Miércoles"]
         }, 
         {
             id: 25,
             nombre: "Duque Fernandez Andres",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Sun Express",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Martes", "Miércoles", "Viernes"]
         }, 
         {
             id: 26,
             nombre: "Duran Londoño Cristian",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Riyadh",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Masculino",
             dias: ["Martes", "Jueves", "Viernes"]
         }, 
         {
             id: 27,
             nombre: "Echeverry Giraldo Daniel",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Vueling",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Lunes","Jueves"]
         }, 
         {
             id: 28,
             nombre: "Eusse Lopez Alejandra",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Vueling",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Femenino",
             dias: ["Lunes","Jueves"]
         }, 
         {
             id: 29,
             nombre: "Florez Cendales Julian",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Sun Express",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Martes", "Miércoles", "Viernes"]
         }, 
         {
             id: 30,
             nombre: "Florez Chalarca Jimena",
-            puesto: "Product Manager",
+            cargo: "Product Manager",
             equipo: "Producto",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Femenino",
             dias: ["Martes", "Miércoles",]
         }, 
         {
             id: 31,
             nombre: "Franco Mejia Felipe",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Riyadh",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Martes","Jueves","Viernes"]
         }, 
         {
             id: 32,
             nombre: "Juyar Galindo Sadai",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Core UI",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Femenino",
             dias: ["Lunes","Martes","Miércoles"]
         }, 
         {
             id: 33,
             nombre: "Galvez Bedoya Santiago",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Riyadh",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Martes", "Jueves", "Viernes"]
         }, 
         {
             id: 34,
             nombre: "Galvis Aguirre Yohana",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Custom 3",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Femenino",
             dias: ["Lunes","Jueves","Viernes"]
         }, 
         {
             id: 35,
             nombre: "Galvis Tabares Santiago",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Automatizaciones",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Miercoles","Jueves"]
         }, 
         {
             id: 36,
             nombre: "Garcia Arango Juan",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Riyadh",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Masculino",
             dias: ["Martes", "Jueves", "Viernes"]
         }, 
         {
             id: 37,
             nombre: "Garcia Giraldo Erika",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Custom 3",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Femenino",
             dias: ["Lunes","Jueves","Viernes"]
         }, 
         {
             id: 38,
             nombre: "Garcia Grisales Sandra",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Custom 1",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Femenino",
             dias: ["Miercoles","Jueves","Viernes"]
         }, 
         {
             id: 39,
             nombre: "Giron Casierra William Alejandro",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Dynamics",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Martes", "Miércoles", "Jueves"]
         }, 
         {
             id: 40,
             nombre: "Gomez Ramirez Diego Bernabe",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Delta",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Masculino",
             dias: ["Lunes","Martes","Miércoles"]
         }, 
         {
             id: 42,
             nombre: "Gomez Castrillon Cindy",
-            puesto: "Scrum Master",
+            cargo: "Scrum Master",
             equipo: "Cyprus",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Femenino",
             dias: ["Miercoles", "Jueves", "Viernes"]
         }, 
         {
             id: 43,
             nombre: "Cumbal Benavides Andrea",
-            puesto: "Scrum Master",
+            cargo: "Scrum Master",
             equipo: "Riyadh",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Femenino",
             dias: ["Martes", "Jueves", "Viernes"]
         }, 
         {
             id: 44,
             nombre: "Gomez Mercado Sara",
-            puesto: "Project Manager",
+            cargo: "Project Manager",
             equipo: "Sun Express",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Femenino",
             dias: ["Martes", "Miércoles", "Viernes"]
         }, 
         {
             id: 45,
             nombre: "Gomez Tangarife Erika",
-            puesto: "IT",
+            cargo: "IT",
             equipo: "TI",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "N/A",
+            genero: "Femenino",
             dias: ["N/A"]
         }, 
         {
             id: 46,
             nombre: "Gonzalez Hernandez Leidy",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Core I Y II",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Femenino",
             dias: ["Lunes","Jueves","Viernes"]
         }, 
         {
             id: 47,
             nombre: "Gonzalez Lopez Daniela",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Producto",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Femenino",
             dias: ["Martes","Miércoles"]
         }, 
         {
             id: 48,
             nombre: "Rojas Tovar Angela",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Dynamics",
+            ciudad: "Pitalito",
+            region: "Zona Sur Occidente",
+            tipoAsistencia: "Remoto",
+            genero: "Femenino",
             dias: ["Remoto"]
         }, 
         {
             id: 49,
             nombre: "Gonzalez Tamayo Andres",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Automatizaciones",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Masculino",
             dias: ["Miercoles","Jueves"]
         },
         {
             id: 50,
             nombre: "Grajales Sanchez Miguel",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Riyadh",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Martes", "Jueves", "Viernes"]
         },
         {
             id: 51,
             nombre: "Guerrero Kevin",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Core UI",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Masculino",
             dias: ["Lunes","Martes","Miércoles"]
         },
         {
             id: 52,
             nombre: "Gutierrez Franco Nataly",
-            puesto: "Scrum Master",
+            cargo: "Scrum Master",
             equipo: "Vueling",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Femenino",
             dias: ["Lunes","Jueves"]
         },
         {
             id: 53,
             nombre: "Henao Alexandra",
-            puesto: "Product Manager",
+            cargo: "Product Manager",
             equipo: "Producto",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Femenino",
             dias: ["Martes","Miércoles"]
         },
         {
             id: 54,
             nombre: "Henao Burgos Jimena",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Platform",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Femenino",
             dias: ["Miercoles", "Jueves", "Viernes"]
         },
         {
             id: 55,
             nombre: "Hernandez Arias David",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Vueling",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Masculino",
             dias: ["Lunes","Jueves"]
         },
         {
             id: 56,
             nombre: "Hernandez Rendon Luisa",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Vueling",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Femenino",
             dias: ["Lunes","Jueves"]
         },
         {
             id: 57,
             nombre: "Herrera Quintero Camila",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Custom 5",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Femenino",
             dias: ["Martes","Miércoles", "Jueves"]
         },
         {
             id: 58,
             nombre: "Infante Angie Carolina",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Riyadh",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Femenino",
             dias: ["Martes", "Jueves", "Viernes"]
         },
         {
             id: 59,
             nombre: "Loaiza Bedoya Manuela",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Custom 5",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Femenino",
             dias: ["Martes","Miércoles", "Jueves"]
         },
         {
             id: 60,
             nombre: "Loaiza Agudelo Santiago",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "AM",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Lunes","Martes","Miércoles"]
         },
         {
             id: 61,
             nombre: "Loaiza Sanchez Leydi Johana",
-            puesto: "Project Manager",
+            cargo: "Project Manager",
             equipo: "Message ",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Femenino",
             dias: ["Miercoles", "Jueves", "Viernes"]
         },
         {
             id: 62,
             nombre: "Londoño Gonzalez Angela",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Vueling",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Femenino",
             dias: ["Lunes","Jueves"]
         },
         {
             id: 63,
             nombre: "Londoño Holguin Maria Fernanda",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Transversal",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "N/A",
+            genero: "Femenino",
             dias: ["N/A"]
         },
         {
             id: 64,
             nombre: "Lopez Diana Lorena",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Sun Express",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Femenino",
             dias: ["Martes", "Miércoles", "Viernes"]
         },
         {
             id: 65,
             nombre: "Lopez Katherine",
-            puesto: "Business Analyst",
+            cargo: "Business Analyst",
             equipo: "Producto",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Femenino",
             dias: ["Martes", "Miércoles"]
         },
         {
             id: 66,
             nombre: "Lopez Hoyos Victor",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Riyadh",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Martes", "Jueves", "Viernes"]
         },
         {
             id: 67,
             nombre: "Mejia Buitrago Daniela",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Custom 2",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "N/A",
+            genero: "Femenino",
             dias: ["N/A"]
         },
         {
             id: 68,
             nombre: "Molina Cadavid Sergio",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Delta",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Lunes","Martes","Miércoles"]
         },
         {
             id: 69,
             nombre: "Montes Londoño Cristian",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "AM",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Masculino",
             dias: ["Lunes","Martes","Miércoles"]
         },
         {
             id: 70,
             nombre: "Morales Herrera Juan",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "CORE UI",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Lunes","Martes","Miércoles"]
         },
         {
             id: 71,
             nombre: "Morales Marin Juliana",
-            puesto: "Project Manager",
+            cargo: "Project Manager",
             equipo: "N/A",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "N/A",
+            genero: "Femenino",
             dias: ["N/A"]
         },
         {
             id: 72,
             nombre: "Morales Velez Sebastian",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Vueling",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Lunes","Jueves"]
         },
         {
             id: 73,
             nombre: "Ocampo Parra Melissa",
-            puesto: "Business Analyst",
+            cargo: "Business Analyst",
             equipo: "Producto",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Femenino",
             dias: ["Martes", "Miércoles"]
         },
         {
             id: 74,
             nombre: "Ortega Cupacan Cristian",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Riyadh",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Martes", "Jueves", "Viernes"]
         },
         {
             id: 75,
             nombre: "Osorio Giraldo Maria Fernanda",
-            puesto: "Business Analyst",
+            cargo: "Business Analyst",
             equipo: "Core I Y II",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Femenino",
             dias: ["Lunes","Jueves","Viernes"]
         },
         {
             id: 76,
             nombre: "Ospina Colorado Nestor",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Riyadh",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Martes", "Jueves", "Viernes"]
         },
         {
             id: 77,
             nombre: "Ospina Londoño Fabiana",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Riyadh",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Femenino",
             dias: ["Martes", "Jueves", "Viernes"]
         },
         {
             id: 78,
             nombre: "Pineda Salas Deivinson",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Riyadh",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Martes", "Jueves", "Viernes"]
         },
         {
             id: 79,
             nombre: "Pineda Vasquez Juliana",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Vueling",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Femenino",
             dias: ["Lunes","Jueves"]
         },
         {
             id: 80,
             nombre: "Posada Garcia William",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Consilium",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Jueves","Viernes"]
         },
         {
             id: 81,
             nombre: "Posada Mejias Jerel",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Vueling",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Masculino",
             dias: ["Lunes","Jueves"]
         },
         {
             id: 82,
             nombre: "Reina Becerra Juan Pablo",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Dynamics",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Martes", "Miércoles", "Jueves"]
         },
         {
             id: 83,
             nombre: "Renteria Gutierrez Santiago",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Core UI",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Masculino",
             dias: ["Lunes","Martes","Miércoles"]
         },
         {
             id: 84,
             nombre: "Rios Cardona Yamid",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Sun Express",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Martes", "Miércoles", "Viernes"]
         },
         {
             id: 85,
             nombre: "Rivera Castrillon Liseth",
-            puesto: "Scrum Master",
+            cargo: "Scrum Master",
             equipo: "Custom 5 - Dynamics",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Femenino",
             dias: ["Martes", "Miércoles", "Jueves"]
         },
         {
             id: 86,
             nombre: "Robles Ocampo Luis",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Riyadh",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Martes", "Jueves", "Viernes"]
         },
         {
             id: 87,
             nombre: "Rodriguez Pineda Johana",
-            puesto: "Project Manager",
+            cargo: "Project Manager",
             equipo: "Producto",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Femenino",
             dias: ["Martes", "Miércoles"]
         },
         {
             id: 88,
             nombre: "Salazar Rendon Fabio",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Vueling",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Lunes","Jueves"]
         },
         {
             id: 89,
             nombre: "Sanchez Cortes Jhon",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Riyadh",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Masculino",
             dias: ["Martes", "Jueves", "Viernes"]
         },
         {
             id: 90,
             nombre: "Sanchez Valencia Carol",
-            puesto: "Scrum Master",
+            cargo: "Scrum Master",
             equipo: "AM",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Femenino",
             dias: ["Lunes","Martes","Miércoles"]
         },
         {
             id: 91,
             nombre: "Sanchez Valencia Daiam",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Custom 3",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Femenino",
             dias: ["Lunes","Jueves","Viernes"]
         },
         {
             id: 92,
             nombre: "Sanchez Velasquez Paola",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Custom 3",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Femenino",
             dias: ["Lunes","Jueves","Viernes"]
         },
         {
             id: 93,
             nombre: "Sanchez Yepes Carolina",
-            puesto: "Product Manager",
+            cargo: "Product Manager",
             equipo: "Transversal",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "N/A",
+            genero: "Femenino",
             dias: ["N/A"]
         },
         {
             id: 94,
             nombre: "Valencia Betancur Leonardo",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Custom 3",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Lunes","Jueves","Viernes"]
         },
         {
             id: 95,
             nombre: "Valencia Martinez Sandra",
-            puesto: "Manager",
+            cargo: "Manager",
             equipo: "Gerente",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "N/A",
+            genero: "Femenino",
             dias: ["N/A"]
         },
         {
             id: 96,
             nombre: "Valencia Valencia Jerson",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Platform",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Miercoles", "Jueves", "Viernes"]
         },
         {
             id: 97,
             nombre: "Villalba Ballesteros Luis Felipe ",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "AM",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Masculino",
             dias: ["Lunes","Martes","Miércoles"]
         },
         {
             id: 98,
             nombre: "Velasco Roman Brayan",
-            puesto: "Project Manager",
+            cargo: "Project Manager",
             equipo: "Custom 1 - Platform",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Miercoles", "Jueves", "Viernes"]
         },
         {
             id: 99,
             nombre: "Velasquez Quintero Sebastian",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Core UI",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Masculino",
             dias: ["Lunes","Martes","Miércoles"]
         },
         {
             id: 100,
             nombre: "Villa Valencia Natalia",
-            puesto: "Product Manager",
+            cargo: "Product Manager",
             equipo: "Producto",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Femenino",
             dias: ["Martes", "Miércoles"]
         },
         {
             id: 101,
             nombre: "Yanez Malave Luis",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "CORE UI",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Masculino",
             dias: ["Lunes","Martes","Miércoles"]
         },
         {
             id: 102,
             nombre: "Zuluaga Cardona Jenny",
-            puesto: "Scrum Master",
+            cargo: "Scrum Master",
             equipo: "Omega - Delta",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Femenino",
             dias: ["Lunes","Martes","Miércoles"]
         },
         {
             id: 103,
             nombre: "Castaño Velasquez Jhon Jairo",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Core I Y II",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Masculino",
             dias: ["Lunes","Jueves","Viernes"]
         },
         {
             id: 104,
             nombre: "Rubio Giraldo Danna Vanessa",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Custom 5",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Femenino",
             dias: ["Martes","Miércoles", "Jueves"]
         },
         {
             id: 106,
             nombre: "Naranjo Garcia Alejandra",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Core I Y II",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Femenino",
             dias: ["Lunes","Jueves","Viernes"]
         },
         {
             id: 107,
             nombre: "Salgado Castaño Juan Felipe",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Diseño",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "N/A",
+            genero: "Masculino",
             dias: ["N/A"]
         },
         {
             id: 108,
             nombre: "Aguirre Ocampo Jheidy Lizeth",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Custom 1",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Femenino",
             dias: ["Miercoles", "Jueves", "Viernes"]
         },
         {
             id: 109,
             nombre: "Gutierrez Rodas Carlos Alberto",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Core I Y II Transversal AV",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Lunes","Jueves","Viernes"]
         },
         {
             id: 110,
             nombre: "Tavera Orozco Natalia",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Core UI",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Femenino",
             dias: ["Lunes","Martes","Miércoles"]
         },
         {
             id: 111,
             nombre: "Mejia Mendoza Jhonatan Alejandro",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Platform",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Miercoles", "Jueves", "Viernes"]
         },
         {
             id: 112,
             nombre: "Mejia Martinez Vanessa Paola",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Omega",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Femenino",
             dias: ["Lunes","Martes","Miercoles"]
         },
         {
             id: 113,
             nombre: "Loaiza Puerta Jorge Luis",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Riyadh",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Martes", "Jueves", "Viernes"]
         },
         {
             id: 114,
             nombre: "Montaño Torres Stefany",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Custom 1",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Femenino",
             dias: ["Miercoles", "Jueves", "Viernes"]
         },
         {
             id: 115,
             nombre: "Acosta Briceño Frank Sebastian",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Custom 3",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Lunes","Jueves","Viernes"]
         },
         {
             id: 116,
             nombre: "Gomez Montoya Luis Fernando",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Omega",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Masculino",
             dias: ["Lunes","Martes","Miercoles"]
         },
         {
             id: 117,
             nombre: "Rubio Tabarez Hector David",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Infra de members",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Miércoles", "Jueves", "Viernes"]
         },
         {
             id: 118,
             nombre: "Salazar Giraldo Pedro Pablo",
-            puesto: "Scrum Master",
+            cargo: "Scrum Master",
             equipo: "Customer Sucess",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "N/A",
+            genero: "Masculino",
             dias: ["N/A"]
         },
         {
             id: 119,
             nombre: "Beltran Cardona Juan Manuel",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Sun Express",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Martes", "Miércoles", "Viernes"]
         },
         {
             id: 120,
             nombre: "Grajales Giraldo JuanJose",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "Dynamics",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Masculino",
             dias: ["Martes", "Miércoles", "Jueves"]
         },
         {
             id: 121,
             nombre: "Henao Ramirez Eduardo Andres",
-            puesto: "Manager Engineering",
+            cargo: "Manager Engineering",
             equipo: "Custom 3",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Lunes","Jueves","Viernes"]
         },
         {
             id: 122,
             nombre: "Cardona Torres Santiago",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Sun Express",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Masculino",
             dias: ["Martes", "Miércoles", "Viernes"]
         },
         {
             id: 123,
             nombre: "Ocampo Castaño Jose Brayan",
-            puesto: "Quality Engineer",
+            cargo: "Quality Engineer",
             equipo: "Automatizaciones",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Miercoles","Jueves"]
         },
         {
             id: 124,
             nombre: "Cano Jaramillo Juan Pablo",
-            puesto: "Application Support Specialist",
+            cargo: "Application Support Specialist",
             equipo: "SRE",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "N/A",
+            genero: "Masculino",
             dias: ["N/A"]
         },
         {
             id: 125,
             nombre: "Albornoz Rodriguez Julian Andres",
-            puesto: "Manager Engineering",
+            cargo: "Manager Engineering",
             equipo: "Custom 1 - Platform",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Miercoles", "Jueves", "Viernes"]
         },
         {
             id: 126,
             nombre: "Rodriguez Huertas Max Frank",
-            puesto: "Director Engineering",
+            cargo: "Director Engineering",
             equipo: "Transversal",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "N/A",
+            genero: "Masculino",
             dias: ["N/A"]
         },
         {
             id: 127,
             nombre: "Fontalvo Salgado Ivan Alberto ",
-            puesto: "Manager Engineering",
+            cargo: "Manager Engineering",
             equipo: "Custom 5 - Dynamics",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Martes", "Miércoles", "Jueves"]
         },
         {
             id: 128,
             nombre: "Gonzalez Muñoz Laura Sofia ",
-            puesto: "Software Engineer",
+            cargo: "Software Engineer",
             equipo: "AM",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Femenino",
             dias: ["Lunes","Martes","Miércoles"]
         },
         {
             id: 129,
             nombre: "Cardona Calderon Cesar",
-            puesto: "Intership",
+            cargo: "Intership",
             equipo: "Sena",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Lunes","Martes","Miércoles","Jueves","Viernes"]
         },
         {
             id: 130,
             nombre: "Galvez Restrepo Nelson ",
-            puesto: "Intership",
+            cargo: "Intership",
             equipo: "Sena",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Masculino",
             dias: ["Lunes","Martes","Miércoles","Jueves","Viernes"]
         },
         {
             id: 131,
             nombre: "Bonilla Daniela ",
-            puesto: "Intership",
+            cargo: "Intership",
             equipo: "Sena",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Femenino",
             dias: ["Lunes","Martes","Miércoles","Jueves","Viernes"]
         },
         {
             id: 132,
             nombre: "Diaz Tovar Cristian ",
-            puesto: "Intership",
+            cargo: "Intership",
             equipo: "Sena",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Masculino",
             dias: ["Lunes","Martes","Miércoles","Jueves","Viernes"]
         },
         {
             id: 133,
             nombre: "Moreno Vargas Hernando  ",
-            puesto: "Intership",
+            cargo: "Intership",
             equipo: "Sena",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Lunes","Martes","Miércoles","Jueves","Viernes"]
         },
         {
             id: 134,
             nombre: "Sanchez Arias Fernan",
-            puesto: "Intership",
+            cargo: "Intership",
             equipo: "Sena",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "Híbrido",
+            genero: "Masculino",
             dias: ["Lunes","Martes","Miércoles","Jueves","Viernes"]
         },
         {
             id: 136,
             nombre: "Mejia Alarcon Julian Andres",
-            puesto: "Intership",
+            cargo: "Intership",
             equipo: "Sena",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
+            genero: "Masculino",
             dias: ["Lunes","Martes","Miércoles","Jueves","Viernes"]
         },
         {
             id: 137,
             nombre: "Cardona Herrera Santiago",
-            puesto: "Intership",
+            cargo: "Intership",
             equipo: "Sena",
+            ciudad: "Bogotá",
+            region: "Cundinamarca",
+            tipoAsistencia: "Remoto",
+            genero: "Masculino",
             dias: ["Lunes","Martes","Miércoles","Jueves","Viernes"]
         },
         {
             id: 138,
             nombre: "Osorio Garcia Andres Enrique",
-            puesto: "Ingeniero de Software",
+            cargo: "Ingeniero de Software",
             equipo: "N/A",
+            ciudad: "Medellín",
+            region: "Antioquia",
+            tipoAsistencia: "N/A",
+            genero: "Masculino",
             dias: ["N/A"]
         },
         {
             id: 139,
             nombre: "Castellano Paula Alejandra",
-            puesto: "Senior Manager, Engineering",
+            cargo: "Senior Manager, Engineering",
             equipo: "Transversal",
+            ciudad: "Cali",
+            region: "Valle del Cauca",
+            tipoAsistencia: "N/A",
+            genero: "Femenino",
             dias: ["N/A"]
         }
         
@@ -1136,9 +1738,15 @@ function editarEmpleado(id) {
     if (empleado) {
         // Cargar datos en el formulario
         document.getElementById('nombre').value = empleado.nombre;
-        document.getElementById('puesto').value = empleado.puesto;
+        document.getElementById('cargo').value = empleado.cargo; // Changed from puesto to cargo
         document.getElementById('equipo').value = empleado.equipo;
-        document.getElementById('cantidadEquipo').value = empleado.cantidadEquipo;
+        document.getElementById('ciudad').value = empleado.ciudad;
+        document.getElementById('region').value = empleado.region;
+        document.getElementById('tipoAsistencia').value = empleado.tipoAsistencia;
+        document.getElementById('genero').value = empleado.genero;
+        
+        // Desmarcar todos los checkboxes de días primero
+        document.querySelectorAll('input[name="dias"]').forEach(cb => cb.checked = false);
         
         // Seleccionar días
         empleado.dias.forEach(dia => {
@@ -1149,6 +1757,7 @@ function editarEmpleado(id) {
         });
         
         // Eliminar el empleado actual para que se pueda actualizar
+        // (Esto es un enfoque simple para "editar", en un sistema real se manejaría un ID de edición)
         eliminarEmpleado(id);
         
         // Hacer scroll hacia el formulario

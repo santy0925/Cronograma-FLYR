@@ -14,7 +14,6 @@
         </div>
 
         <div class="main-content">
-            <!-- Sección de Registro -->
             <div class="section">
                 <h2>Registrar Empleado</h2>
                 <form id="employeeForm">
@@ -24,13 +23,33 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="puesto">Puesto:</label>
-                        <input type="text" id="puesto" required>
+                        <label for="cargo">Cargo:</label>
+                        <input type="text" id="cargo" required>
                     </div>
 
                     <div class="form-group">
                         <label for="equipo">Equipo:</label>
                         <input type="text" id="equipo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ciudad">Ciudad:</label>
+                        <input type="text" id="ciudad" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="region">Región:</label>
+                        <input type="text" id="region" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipoAsistencia">Tipo de Asistencia:</label>
+                        <input type="text" id="tipoAsistencia" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="genero">Género:</label>
+                        <input type="text" id="genero" required>
                     </div>
 
                     <div class="form-group">
@@ -72,9 +91,8 @@
                 <div id="message"></div>
             </div>
 
-            <!-- Sección de Búsqueda -->
             <div class="section">
-                <h2>🔍 Buscar Empleado</h2>
+                <h2>Buscar Empleado por Nombre</h2>
                 <div class="search-section">
                     <div class="form-group">
                         <label for="buscarNombre">Nombre del Empleado:</label>
@@ -85,9 +103,20 @@
                 <div id="resultadoBusqueda"></div>
             </div>
 
-            <!-- Lista de Empleados -->  
             <div class="section">
-                <h2>👥 Lista de Empleados</h2>
+                <h2>Buscar Empleado por Equipo</h2>
+                <div class="search-section">
+                    <div class="form-group">
+                        <label for="buscarEquipo">Nombre del Equipo:</label>
+                        <input type="text" id="buscarEquipo" placeholder="Ingresa el nombre del equipo">
+                    </div>
+                    <button type="button" class="btn" onclick="buscarPorEquipo()">Buscar por Equipo</button>
+                </div>
+                <div id="resultadoBusquedaEquipo"></div>
+            </div>
+
+            <div class="section">
+                <h2>Lista de Empleados</h2>
                 <div id="listaEmpleados"></div>
             </div>
         </div>
@@ -96,4 +125,4 @@
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
