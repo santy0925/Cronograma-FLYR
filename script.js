@@ -1251,8 +1251,8 @@ function cargarDatosIniciales() {
             nombre: "Valencia Martinez Sandra",
             cargo: "Manager",
             equipo: "Gerente",
-            ciudad: "Bogotá",
-            region: "Cundinamarca",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
             tipoAsistencia: "N/A",
             genero: "Femenino",
             dias: ["N/A"]
@@ -1640,7 +1640,7 @@ function cargarDatosIniciales() {
             region: "Caldas",
             tipoAsistencia: "Presencial",
             genero: "Femenino",
-            dias: ["Lunes","Martes","Miércoles","Jueves","Viernes"]
+            dias: ["N/A"]
         },
         {
             id: 132,
@@ -1669,9 +1669,9 @@ function cargarDatosIniciales() {
             nombre: "Sanchez Arias Fernan",
             cargo: "Intership",
             equipo: "Sena",
-            ciudad: "Cali",
-            region: "Valle del Cauca",
-            tipoAsistencia: "Híbrido",
+            ciudad: "Manizales",
+            region: "Caldas",
+            tipoAsistencia: "Presencial",
             genero: "Masculino",
             dias: ["Lunes","Martes","Miércoles","Jueves","Viernes"]
         },
@@ -1717,6 +1717,94 @@ function cargarDatosIniciales() {
             region: "Valle del Cauca",
             tipoAsistencia: "N/A",
             genero: "Femenino",
+            dias: ["N/A"]
+        },
+        {
+            id: 140,
+            nombre: "Gonzalez Olviera Yeffran",
+            cargo: "Software Engineer",
+            equipo: "Infra AV",
+            ciudad: "Medellín",
+            region: "Costa Atlántica",
+            tipoAsistencia: "Remoto",
+            genero: "Masculino",
+            dias: ["N/A"]
+        },
+        {
+            id: 141,
+            nombre: "Buitrago Guzman Franzi",
+            cargo: "Software Engineer",
+            equipo: "Diseño",
+            ciudad: "Bogotá",
+            region: "Zona Andina",
+            tipoAsistencia: "Remoto",
+            genero: "Femenino",
+            dias: ["N/A"]
+        },
+        {
+            id: 142,
+            nombre: "Pacheco Escobar Ricardo",
+            cargo: "Software Engineer",
+            equipo: "Avianca",
+            ciudad: "Bogotá",
+            region: "Zona Andina",
+            tipoAsistencia: "Remoto",
+            genero: "Masculino",
+            dias: ["N/A"]
+        },
+        {
+            id: 143,
+            nombre: "Quintero Gaitan Laura",
+            cargo: "Quality Engineer",
+            equipo: "Riyadh",
+            ciudad: "Bogotá",
+            region: "Zona Andina",
+            tipoAsistencia: "Remoto",
+            genero: "Femenino",
+            dias: ["N/A"]
+        },
+        {
+            id: 144,
+            nombre: "Minotta Medina Lina",
+            cargo: "Quality Engineer",
+            equipo: "Vueling",
+            ciudad: "Cali",
+            region: "Zona Pacífico",
+            tipoAsistencia: "Remoto",
+            genero: "Femenino",
+            dias: ["N/A"]
+        },
+        {
+            id: 145,
+            nombre: "Tavera Orozco Luis",
+            cargo: "Software Engineer",
+            equipo: "Migración",
+            ciudad: "Cali",
+            region: "Zona Pacífico",
+            tipoAsistencia: "Remoto",
+            genero: "Masculino",
+            dias: ["N/A"]
+        },
+        {
+            id: 146,
+            nombre: "Narvaez Erazo Alexander",
+            cargo: "Software Engineer",
+            equipo: "Sun Express",
+            ciudad: "Ipiales - Nariño ",
+            region: "Zona Amazonas",
+            tipoAsistencia: "Remoto",
+            genero: "Masculino",
+            dias: ["N/A"]
+        },
+        {
+            id: 147,
+            nombre: "Ramirez Parra Cristian",
+            cargo: "Software Engineer",
+            equipo: "Accesibilidad",
+            ciudad: "Libano  ",
+            region: "Zona Andina",
+            tipoAsistencia: "Remoto",
+            genero: "Masculino",
             dias: ["N/A"]
         }
         
