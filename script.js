@@ -228,44 +228,33 @@ function cargarDatosIniciales() {
             nombre: "Castaño Rivera Esteban",
             cargo: "Software Engineer",
             equipo: "Platform",
-            ciudad: "Manizales",
-            region: "Caldas",
-            tipoAsistencia: "Presencial",
+            ciudad: "Chinchiná",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Masculino",
-            dias: [ "Miercoles", "Jueves", "Viernes" ]
+            dias: [ "N/A" ]
         },
         {
             id: 2,
             nombre: "Acero Duarte Marisol",
             cargo: "Head of Quality Manager",
             equipo: "Transversal",
-            ciudad: "Bogotá",
-            region: "Cundinamarca",
-            tipoAsistencia: "Remoto",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Femenino",
-            dias: ["Lunes", "Martes", "Jueves"]
+            dias: ["N/A"]
         },
         {
             id: 3,
             nombre: "Alarcon Garcia Emilia",
             cargo: "Quality Engineer",
             equipo: "Riyadh",
-            ciudad: "Medellín",
-            region: "Antioquia",
-            tipoAsistencia: "Presencial",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Femenino",
-            dias: ["Martes", "Jueves", "Viernes"]
-        },
-        {
-            id: 4,
-            nombre: "Alarcon Garcia Juliana",
-            cargo: "Quality Engineer",
-            equipo: "Custom 3",
-            ciudad: "Cali",
-            region: "Valle del Cauca",
-            tipoAsistencia: "Híbrido",
-            genero: "Femenino",
-            dias: ["Lunes","Jueves","Viernes"]
+            dias: ["N/A"]
         },
         {
             id: 5,
@@ -273,8 +262,8 @@ function cargarDatosIniciales() {
             cargo: "Business Analyst",
             equipo: "Producto",
             ciudad: "Manizales",
-            region: "Caldas",
-            tipoAsistencia: "Presencial",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Femenino",
             dias: ["Martes", "Miercoles"]
         },
@@ -283,9 +272,9 @@ function cargarDatosIniciales() {
             nombre: "Arango Ramirez Luisa",
             cargo: "Quality Engineer",
             equipo: "Infras",
-            ciudad: "Bogotá",
-            region: "Cundinamarca",
-            tipoAsistencia: "Remoto",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Femenino",
             dias: ["Miercoles", "Jueves", "Viernes"]
         },
@@ -294,22 +283,22 @@ function cargarDatosIniciales() {
             nombre: "Arbelaez Calle Alejandro",
             cargo: "Software Engineer",
             equipo: "Consilium",
-            ciudad: "Medellín",
-            region: "Antioquia",
+            ciudad: "Man",
+            region: "Zona Cafetera",
             tipoAsistencia: "Presencial",
             genero: "Masculino",
-            dias: ["Jueves","Viernes"]
+            dias: ["N/A"]
         },
         {
             id: 8,
             nombre: "Arias Escudero Nicolas",
             cargo: "Software Engineer",
             equipo: "Custom 5",
-            ciudad: "Cali",
-            region: "Valle del Cauca",
-            tipoAsistencia: "Híbrido",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Masculino",
-            dias: ["Martes", "Miércoles", "Jueves"]
+            dias: ["N/A"]
         },
         {
             id: 9,
@@ -317,43 +306,43 @@ function cargarDatosIniciales() {
             cargo: "Software Engineer",
             equipo: "Core UI ",
             ciudad: "Manizales",
-            region: "Caldas",
-            tipoAsistencia: "Presencial",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Masculino",
-            dias: ["Lunes","Martes","Miércoles"]
+            dias: ["N/A"]
         },
         {
             id: 10,
             nombre: "Aristizabal Andres",
             cargo: "Software Engineer",
             equipo: "Custom 5",
-            ciudad: "Bogotá",
-            region: "Cundinamarca",
-            tipoAsistencia: "Remoto",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Masculino",
-            dias: ["Martes", "Miércoles", "Jueves"]
+            dias: ["N/A"]
         },
         {
             id: 11,
             nombre: "Benavides Guevara Paula",
             cargo: "Quality Engineer",
             equipo: "Cyprus",
-            ciudad: "Medellín",
-            region: "Antioquia",
-            tipoAsistencia: "Presencial",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Femenino",
-            dias: ["Miércoles", "Jueves", "Viernes"]
+            dias: ["N/A"]
         },
         {
             id: 12,
             nombre: "Betancourt Montoya Gewralds",
             cargo: "Software Engineer",
             equipo: "Riyadh",
-            ciudad: "Cali",
-            region: "Valle del Cauca",
-            tipoAsistencia: "Híbrido",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Masculino",
-            dias: ["Martes","Jueves","Viernes"]
+            dias: ["N/A"]
         },
         {
             id: 13,
@@ -361,43 +350,43 @@ function cargarDatosIniciales() {
             cargo: "Product Manager",
             equipo: "Producto",
             ciudad: "Manizales",
-            region: "Caldas",
-            tipoAsistencia: "Presencial",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Femenino",
-            dias: ["Martes","Miércoles"]
+            dias: ["N/A"]
         },
         {
             id: 14,
             nombre: "Buitrago Ramirez Darwin",
             cargo: "Software Engineer",
             equipo: "Core I Y II",
-            ciudad: "Bogotá",
-            region: "Cundinamarca",
-            tipoAsistencia: "Remoto",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Masculino",
-            dias: ["Lunes","Jueves","Viernes"]
+            dias: ["N/A"]
         },
         {
             id: 15,
             nombre: "Buritica Atehortua Oscar",
             cargo: "Software Engineer",
             equipo: "Riyadh",
-            ciudad: "Medellín",
-            region: "Antioquia",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
             tipoAsistencia: "Presencial",
             genero: "Masculino",
-            dias: ["Martes", "Jueves", "Viernes"]
+            dias: ["N/A"]
         },
         {
             id: 16,
             nombre: "Bustamante Rojas Cristian",
             cargo: "Software Engineer",
             equipo: "Vueling",
-            ciudad: "Cali",
-            region: "Valle del Cauca",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
             tipoAsistencia: "Híbrido",
             genero: "Masculino",
-            dias: ["Lunes","Jueves"]
+            dias: ["N/A"]
         }, 
         {
             id: 17,
@@ -405,43 +394,43 @@ function cargarDatosIniciales() {
             cargo: "Software Engineer",
             equipo: "Custom 5",
             ciudad: "Manizales",
-            region: "Caldas",
-            tipoAsistencia: "Presencial",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Masculino",
-            dias: ["Martes","Miercoles","Jueves"]
+            dias: ["N/A"]
         }, 
         {
             id: 18,
             nombre: "Cañon Peña Yurani",
             cargo: "Scrum Master",
             equipo: "Core UI",
-            ciudad: "Bogotá",
-            region: "Cundinamarca",
-            tipoAsistencia: "Remoto",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Femenino",
-            dias: ["Lunes", "Martes", "Miercoles"]
+            dias: ["N/A"]
         }, 
         {
             id: 19,
             nombre: "Cardona Mendoza Birman",
             cargo: "Software Engineer",
             equipo: "Members",
-            ciudad: "Medellín",
-            region: "Antioquia",
-            tipoAsistencia: "Presencial",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Masculino",
-            dias: ["Miércoles", "Jueves", "Viernes"]
+            dias: ["N/A"]
         }, 
         {
             id: 20,
             nombre: "Carreño Alvarez Elizabeth",
             cargo: "Business Analyst",
             equipo: "Producto",
-            ciudad: "Cali",
-            region: "Valle del Cauca",
-            tipoAsistencia: "Híbrido",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Femenino",
-            dias: ["Martes","Miércoles"]
+            dias: ["N/A"]
         }, 
         {
             id: 21,
@@ -449,43 +438,43 @@ function cargarDatosIniciales() {
             cargo: "Software Engineer",
             equipo: "Custom 5",
             ciudad: "Manizales",
-            region: "Caldas",
-            tipoAsistencia: "Presencial",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Masculino",
-            dias: ["Martes","Miércoles", "Jueves"]
+            dias: ["N/A"]
         }, 
         {
             id: 22,
             nombre: "Ceballos Rojas Diego Fernando",
             cargo: "Software Engineer",
             equipo: "Sun Express",
-            ciudad: "Bogotá",
-            region: "Cundinamarca",
-            tipoAsistencia: "Remoto",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Masculino",
-            dias: ["Martes", "Miércoles", "Viernes"]
+            dias: ["N/A"]
         }, 
         {
             id: 23,
             nombre: "Cruz Barrera Christian David",
             cargo: "Software Engineer",
             equipo: "Core UI",
-            ciudad: "Medellín",
-            region: "Antioquia",
-            tipoAsistencia: "Presencial",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Masculino",
-            dias: ["Lunes","Martes","Miércoles"]
+            dias: ["N/A"]
         }, 
         {
             id: 24,
             nombre: "Cuartas Castano David",
             cargo: "Software Engineer",
             equipo: "AM",
-            ciudad: "Cali",
-            region: "Valle del Cauca",
-            tipoAsistencia: "Híbrido",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Masculino",
-            dias: ["Lunes","Martes","Miércoles"]
+            dias: ["N/A"]
         }, 
         {
             id: 25,
@@ -503,33 +492,33 @@ function cargarDatosIniciales() {
             nombre: "Duran Londoño Cristian",
             cargo: "Software Engineer",
             equipo: "Riyadh",
-            ciudad: "Bogotá",
-            region: "Cundinamarca",
-            tipoAsistencia: "Remoto",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Masculino",
-            dias: ["Martes", "Jueves", "Viernes"]
+            dias: ["N/A"]
         }, 
         {
             id: 27,
             nombre: "Echeverry Giraldo Daniel",
             cargo: "Software Engineer",
             equipo: "Vueling",
-            ciudad: "Medellín",
-            region: "Antioquia",
-            tipoAsistencia: "Presencial",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Masculino",
-            dias: ["Lunes","Jueves"]
+            dias: ["N/A"]
         }, 
         {
             id: 28,
             nombre: "Eusse Lopez Alejandra",
             cargo: "Software Engineer",
             equipo: "Vueling",
-            ciudad: "Cali",
-            region: "Valle del Cauca",
-            tipoAsistencia: "Híbrido",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Femenino",
-            dias: ["Lunes","Jueves"]
+            dias: ["N/A"]
         }, 
         {
             id: 29,
@@ -537,43 +526,43 @@ function cargarDatosIniciales() {
             cargo: "Software Engineer",
             equipo: "Sun Express",
             ciudad: "Manizales",
-            region: "Caldas",
-            tipoAsistencia: "Presencial",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Masculino",
-            dias: ["Martes", "Miércoles", "Viernes"]
+            dias: ["N/A"]
         }, 
         {
             id: 30,
             nombre: "Florez Chalarca Jimena",
             cargo: "Product Manager",
             equipo: "Producto",
-            ciudad: "Bogotá",
-            region: "Cundinamarca",
-            tipoAsistencia: "Remoto",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Femenino",
-            dias: ["Martes", "Miércoles",]
+            dias: ["N/A"]
         }, 
         {
             id: 31,
             nombre: "Franco Mejia Felipe",
             cargo: "Software Engineer",
             equipo: "Riyadh",
-            ciudad: "Medellín",
-            region: "Antioquia",
-            tipoAsistencia: "Presencial",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Masculino",
-            dias: ["Martes","Jueves","Viernes"]
+            dias: ["N/A"]
         }, 
         {
             id: 32,
             nombre: "Juyar Galindo Sadai",
             cargo: "Software Engineer",
             equipo: "Core UI",
-            ciudad: "Cali",
-            region: "Valle del Cauca",
-            tipoAsistencia: "Híbrido",
-            genero: "Femenino",
-            dias: ["Lunes","Martes","Miércoles"]
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
+            genero: "Masculino",
+            dias: ["N/A"]
         }, 
         {
             id: 33,
@@ -732,13 +721,13 @@ function cargarDatosIniciales() {
         {
             id: 48,
             nombre: "Rojas Tovar Angela",
-            cargo: "Quality Engineer",
-            equipo: "Dynamics",
             ciudad: "Pitalito",
             region: "Zona Sur Occidente",
             tipoAsistencia: "Remoto",
+            equipo: "Dynamics",
             genero: "Femenino",
-            dias: ["Remoto"]
+            cargo: "Quality Engineer",
+            dias: ["N/A"]
         }, 
         {
             id: 49,
@@ -1720,17 +1709,6 @@ function cargarDatosIniciales() {
             dias: ["N/A"]
         },
         {
-            id: 140,
-            nombre: "Gonzalez Olviera Yeffran",
-            cargo: "Software Engineer",
-            equipo: "Infra AV",
-            ciudad: "Medellín",
-            region: "Costa Atlántica",
-            tipoAsistencia: "Remoto",
-            genero: "Masculino",
-            dias: ["N/A"]
-        },
-        {
             id: 141,
             nombre: "Buitrago Guzman Franzi",
             cargo: "Software Engineer",
@@ -1781,7 +1759,7 @@ function cargarDatosIniciales() {
             equipo: "Migración",
             ciudad: "Cali",
             region: "Zona Pacífico",
-            tipoAsistencia: "Remoto",
+            tipoAsistencia: "Remote",
             genero: "Masculino",
             dias: ["N/A"]
         },
@@ -1792,7 +1770,7 @@ function cargarDatosIniciales() {
             equipo: "Sun Express",
             ciudad: "Ipiales - Nariño ",
             region: "Zona Amazonas",
-            tipoAsistencia: "Remoto",
+            tipoAsistencia: "Remote",
             genero: "Masculino",
             dias: ["N/A"]
         },
@@ -1803,7 +1781,62 @@ function cargarDatosIniciales() {
             equipo: "Accesibilidad",
             ciudad: "Libano  ",
             region: "Zona Andina",
+            tipoAsistencia: "Remote",
+            genero: "Masculino",
+            dias: ["N/A"]
+        },
+        {
+            id: 148,
+            nombre: "Bocanegra Acosta Maritza",
+            cargo: "Core I Y II",
+            equipo: "Scrum Master   ",
+            ciudad: "Armenia",
+            region: "Zona Cafetera",
             tipoAsistencia: "Remoto",
+            genero: "Femenino",
+            dias: ["N/A"]
+        },
+        {
+            id: 149,
+            nombre: "Gonzalez Olviera Yeffran",
+            cargo: "Software Engineer",
+            equipo: "Infra AV",
+            ciudad: "barranquilla",
+            region: "Costa Atlántica",
+            tipoAsistencia: "Remoto",
+            genero: "Masculino",
+            dias: ["N/A"]
+        },
+        {
+            id: 150,
+            nombre: "Carrascal Rojas Yorman",
+            cargo: "Software Engineer",
+            equipo: "Infra AV",
+            ciudad: "Ocaña",
+            region: "Santander",
+            tipoAsistencia: "Remote",
+            genero: "Masculino",
+            dias: ["N/A"]
+        },
+        {
+            id: 151,
+            nombre: "Corrales Ortiz Juan",
+            cargo: "Software Engineer",
+            equipo: "Mantenimiento & Suporte",
+            ciudad: "Risaralda",
+            region: "Zona Cafetera",
+            tipoAsistencia: "Remote",
+            genero: "Masculino",
+            dias: ["N/A"]
+        },
+        {
+            id: 152,
+            nombre: "Duque Fernandez Andres",
+            cargo: "Software Engineer",
+            equipo: "Sun Express",
+            ciudad: "Manizales",
+            region: "Zona Cafetera",
+            tipoAsistencia: "On-Site",
             genero: "Masculino",
             dias: ["N/A"]
         }
