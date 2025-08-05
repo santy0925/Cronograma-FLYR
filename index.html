@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Información de Empleados</title>
+    <title>Sistema de Información de Empleados FLYR</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
 
         <div class="main-content">
             <div class="section">
-                <h2>Registrar Empleado</h2>
+                <h2>Registrar o Editar Empleado</h2>
                 <form id="employeeForm">
                     <div class="form-group">
                         <label for="nombre">Nombre Completo:</label>
@@ -113,6 +113,51 @@
                     <button type="button" class="btn" onclick="buscarPorEquipo()">Buscar por Equipo</button>
                 </div>
                 <div id="resultadoBusquedaEquipo"></div>
+            </div>
+            
+            <div class="section">
+                <h2>Editar Días de Equipo</h2>
+                <div class="search-section">
+                    <div class="form-group">
+                        <label for="equipoAEditar">Equipo a Editar:</label>
+                        <input type="text" id="equipoAEditar" placeholder="Ingresa el nombre del equipo">
+                    </div>
+                    <div class="form-group">
+                        <label>Nuevos Días de Trabajo:</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="edit-lunes" name="edit-dias" value="Lunes">
+                                <label for="edit-lunes">Lunes</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="edit-martes" name="edit-dias" value="Martes">
+                                <label for="edit-martes">Martes</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="edit-miercoles" name="edit-dias" value="Miércoles">
+                                <label for="edit-miercoles">Miércoles</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="edit-jueves" name="edit-dias" value="Jueves">
+                                <label for="edit-jueves">Jueves</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="edit-viernes" name="edit-dias" value="Viernes">
+                                <label for="edit-viernes">Viernes</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="edit-sabado" name="edit-dias" value="Sábado">
+                                <label for="edit-sabado">Sábado</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="edit-domingo" name="edit-dias" value="Domingo">
+                                <label for="edit-domingo">Domingo</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn" id="btn-editar-equipo">Actualizar Días de Equipo</button>
+                </div>
+                <div id="messageEquipo"></div>
             </div>
 
             <div class="section">

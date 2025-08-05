@@ -199,11 +199,24 @@ input[type="text"]:focus, select:focus {
     border-left: 4px solid #667eea;
     cursor: pointer;
     transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .employee-card:hover {
     transform: translateX(5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.employee-card .edit-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 /* Responsive*/
